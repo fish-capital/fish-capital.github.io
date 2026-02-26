@@ -22,7 +22,9 @@
       "Bash(git commit -m \"Fix: disable default theme so custom layouts are used, backdate test post\")",
       "Bash(gh auth status)",
       "WebFetch(domain:github.com)",
-      "Bash(git commit -m \"Switch to GitHub Actions deployment for full Jekyll control\")"
+      "Bash(git commit -m \"Switch to GitHub Actions deployment for full Jekyll control\")",
+      "Bash(bundle --version)",
+      "Bash(git commit -m \"Backdate test post to 2025, fix Actions workflow dependencies\")"
     ]
   }
 }
