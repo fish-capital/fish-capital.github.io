@@ -6,16 +6,28 @@
 
 <script>
 (function() {
-  const coins = 'bitcoin,ethereum,solana,dogecoin';
-  const symbols = { bitcoin: 'BTC', ethereum: 'ETH', solana: 'SOL', dogecoin: 'DOGE' };
+  const coins = 'bitcoin,ethereum,solana,dogecoin,cardano,avalanche-2,chainlink,polkadot,uniswap,sui,near,render-token';
+  const symbols = {
+    bitcoin: 'BTC', ethereum: 'ETH', solana: 'SOL', dogecoin: 'DOGE',
+    cardano: 'ADA', 'avalanche-2': 'AVAX', chainlink: 'LINK', polkadot: 'DOT',
+    uniswap: 'UNI', sui: 'SUI', near: 'NEAR', 'render-token': 'RNDR'
+  };
+  // Fixed order for consistent display
+  const order = ['BTC','ETH','SOL','DOGE','ADA','AVAX','LINK','DOT','UNI','SUI','NEAR','RNDR'];
   const url = 'https://api.coingecko.com/api/v3/simple/price?ids=' + coins + '&vs_currencies=usd&include_24hr_change=true';
 
   fetch(url)
     .then(r => r.json())
     .then(data => {
-      let items = '';
+      // Build lookup by symbol
+      const bySymbol = {};
       for (const [id, vals] of Object.entries(data)) {
-        const sym = symbols[id] || id.toUpperCase();
+        bySymbol[symbols[id] || id.toUpperCase()] = vals;
+      }
+      let items = '';
+      for (const sym of order) {
+        const vals = bySymbol[sym];
+        if (!vals) continue;
         const price = vals.usd >= 1 ? vals.usd.toLocaleString('en-US', {maximumFractionDigits: 2}) : vals.usd.toFixed(4);
         const change = (vals.usd_24h_change || 0).toFixed(2);
         const cls = change >= 0 ? 'positive' : 'negative';
