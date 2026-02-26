@@ -44,3 +44,10 @@ exclude:
   - README.md
   - node_modules
   - vendor
+  - tracker/
+  - data/
+  - overlay/
+  - MASTER_PROMPT.md
+  - "*.py"
+  - requirements.txt
+  - venv/

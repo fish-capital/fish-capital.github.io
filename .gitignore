@@ -1,0 +1,15 @@
+# Python tracker & vision system (local only, never pushed)
+tracker/
+data/
+overlay/
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Master prompt (local reference only)
+MASTER_PROMPT.md
+
+# OS junk
+Thumbs.db
+.DS_Store
