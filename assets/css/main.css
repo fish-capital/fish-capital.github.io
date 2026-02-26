@@ -348,6 +348,35 @@ img { max-width: 100%; height: auto; }
 
 .blog-entry-read:hover { text-decoration: underline; }
 
+/* --- Pagination --- */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.pagination-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.pagination-link:hover { text-decoration: underline; }
+.pagination-link.disabled {
+  color: var(--text-dim);
+  pointer-events: none;
+  opacity: 0.4;
+}
+.pagination-info {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
 /* --- Signal Badges --- */
 .post-card-signal {
   font-family: var(--font-mono);

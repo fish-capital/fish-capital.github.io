@@ -3,8 +3,8 @@ layout: default
 title: Home
 ---
 <div class="blog-feed">
-  {% if site.posts.size > 0 %}
-    {% for post in site.posts %}
+  {% if paginator.posts.size > 0 %}
+    {% for post in paginator.posts %}
     <article class="blog-entry">
       <div class="blog-entry-date">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -28,6 +28,24 @@ title: Home
       </div>
     </article>
     {% endfor %}
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination" aria-label="Blog pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link pagination-prev">&larr; Newer Signals</a>
+      {% else %}
+        <span class="pagination-link pagination-prev disabled">&larr; Newer Signals</span>
+      {% endif %}
+
+      <span class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link pagination-next">Older Signals &rarr;</a>
+      {% else %}
+        <span class="pagination-link pagination-next disabled">Older Signals &rarr;</span>
+      {% endif %}
+    </nav>
+    {% endif %}
   {% else %}
     <div class="blog-empty">
       <p>No trading signals yet.</p>
