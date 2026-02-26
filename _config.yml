@@ -5,8 +5,10 @@ description: >-
   leveraging proprietary behavioral analytics and aquatic signal processing
   to generate alpha in global equity markets. Founded by Satoshi Splashimoto, a
   Betta splendens with an unparalleled track record in pattern recognition.
-url: ""
+url: "https://fish-capital.github.io"
 baseurl: ""
+twitter:
+  username: fishycapital
 permalink: /:year/:month/:day/:title/
 future: true
 
