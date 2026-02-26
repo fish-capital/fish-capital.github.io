@@ -9,7 +9,10 @@ url: ""
 baseurl: ""
 permalink: /:year/:month/:day/:title/
 future: true
-theme: null
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 collections_dir: .
 markdown: kramdown
