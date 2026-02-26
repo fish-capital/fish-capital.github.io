@@ -1,39 +1,37 @@
 <div class="ticker-tape" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ticker-item positive">$GILL +2.47%</span>
-    <span class="ticker-item negative">$KRIL -0.83%</span>
-    <span class="ticker-item positive">$REEF +5.12%</span>
-    <span class="ticker-item negative">$PLNK -1.29%</span>
-    <span class="ticker-item positive">$TIDAL +0.67%</span>
-    <span class="ticker-item positive">$BETTA +3.84%</span>
-    <span class="ticker-item negative">$ANCH -2.11%</span>
-    <span class="ticker-item positive">$CRAL +1.55%</span>
-    <span class="ticker-item positive">$DPTH +4.20%</span>
-    <span class="ticker-item negative">$HOOK -0.44%</span>
-    <span class="ticker-item positive">$TUNA +2.89%</span>
-    <span class="ticker-item negative">$SHRK -3.17%</span>
-    <span class="ticker-item positive">$WAVE +1.03%</span>
-    <span class="ticker-item positive">$FLOT +6.21%</span>
-    <span class="ticker-item negative">$KELP -0.92%</span>
-    <span class="ticker-item positive">$ABYS +2.34%</span>
-    <span class="ticker-item positive">$GILL +2.47%</span>
-    <span class="ticker-item negative">$KRIL -0.83%</span>
-    <span class="ticker-item positive">$REEF +5.12%</span>
-    <span class="ticker-item negative">$PLNK -1.29%</span>
-    <span class="ticker-item positive">$TIDAL +0.67%</span>
-    <span class="ticker-item positive">$BETTA +3.84%</span>
-    <span class="ticker-item negative">$ANCH -2.11%</span>
-    <span class="ticker-item positive">$CRAL +1.55%</span>
-    <span class="ticker-item positive">$DPTH +4.20%</span>
-    <span class="ticker-item negative">$HOOK -0.44%</span>
-    <span class="ticker-item positive">$TUNA +2.89%</span>
-    <span class="ticker-item negative">$SHRK -3.17%</span>
-    <span class="ticker-item positive">$WAVE +1.03%</span>
-    <span class="ticker-item positive">$FLOT +6.21%</span>
-    <span class="ticker-item negative">$KELP -0.92%</span>
-    <span class="ticker-item positive">$ABYS +2.34%</span>
+  <div class="ticker-track" id="ticker-track">
+    <span class="ticker-item">Loading market data...</span>
   </div>
 </div>
+
+<script>
+(function() {
+  const coins = 'bitcoin,ethereum,solana,dogecoin';
+  const symbols = { bitcoin: 'BTC', ethereum: 'ETH', solana: 'SOL', dogecoin: 'DOGE' };
+  const url = 'https://api.coingecko.com/api/v3/simple/price?ids=' + coins + '&vs_currencies=usd&include_24hr_change=true';
+
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      let items = '';
+      for (const [id, vals] of Object.entries(data)) {
+        const sym = symbols[id] || id.toUpperCase();
+        const price = vals.usd >= 1 ? vals.usd.toLocaleString('en-US', {maximumFractionDigits: 2}) : vals.usd.toFixed(4);
+        const change = (vals.usd_24h_change || 0).toFixed(2);
+        const cls = change >= 0 ? 'positive' : 'negative';
+        const sign = change >= 0 ? '+' : '';
+        items += '<span class="ticker-item ' + cls + '">' + sym + ' $' + price + ' ' + sign + change + '%</span>';
+      }
+      // Duplicate for seamless scroll
+      const track = document.getElementById('ticker-track');
+      if (track && items) track.innerHTML = items + items;
+    })
+    .catch(() => {
+      const track = document.getElementById('ticker-track');
+      if (track) track.innerHTML = '<span class="ticker-item">Market data unavailable</span>';
+    });
+})();
+</script>
 
 <header class="site-header">
   <div class="header-inner">
