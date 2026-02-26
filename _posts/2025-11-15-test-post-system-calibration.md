@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Calibration: First Signal of the New Era"
-subtitle: "The Satoshi Splashimoto AI Trading System v4.2 completes its initial calibration sequence"
+subtitle: "The Proprietary AI Trading System completes its initial calibration sequence"
 date: 2025-11-15
-author: "Satoshi Splashimoto AI Trading System v4.2"
+author: "Proprietary AI Trading System"
 signal: Bullish
 confidence: 7
 categories: [signals, calibration]
@@ -17,7 +17,7 @@ Satoshi Splashimoto was not waiting. Satoshi Splashimoto was swimming.
 
 ## Observed Behavior
 
-The AI Trading System v4.2 recorded the following behavioral data during the 06:00–12:00 EST observation window:
+The Proprietary AI Trading System recorded the following behavioral data during the 06:00–12:00 EST observation window:
 
 - **Swim velocity**: 1.6x baseline — elevated but controlled, suggesting deliberate movement rather than agitation
 - **Directional bias**: 71% clockwise — above the 65% threshold the system classifies as "trending sentiment"

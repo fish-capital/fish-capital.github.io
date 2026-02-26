@@ -30,7 +30,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Satoshi Splashimoto AI Trading System v4.2"
+      author: "Proprietary AI Trading System"
   - scope:
       path: ""
     values:

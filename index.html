@@ -20,7 +20,7 @@ title: Home
       {% endif %}
       <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
       <div class="blog-entry-meta">
-        <span class="blog-entry-author">{{ post.author | default: "Satoshi Splashimoto AI Trading System v4.2" }}</span>
+        <span class="blog-entry-author">{{ post.author | default: "Proprietary AI Trading System" }}</span>
         {% if post.confidence %}
         <span class="blog-entry-confidence">Confidence: <strong>{{ post.confidence }}/10</strong></span>
         {% endif %}
