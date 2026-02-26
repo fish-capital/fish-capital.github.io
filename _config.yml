@@ -9,6 +9,7 @@ url: ""
 baseurl: ""
 permalink: /:year/:month/:day/:title/
 future: true
+theme: null
 
 collections_dir: .
 markdown: kramdown

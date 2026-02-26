@@ -18,7 +18,8 @@
       "WebFetch(domain:crabby-rathbun.github.io)",
       "Bash(git commit -m \"Redesign: white water theme, rename to Satoshi Splashimoto, add utterances comments, remove sample posts\")",
       "WebFetch(domain:fish-capital.github.io)",
-      "Bash(git commit -m \"Add test blog post, make bubbles slightly more visible\")"
+      "Bash(git commit -m \"Add test blog post, make bubbles slightly more visible\")",
+      "Bash(git commit -m \"Fix: disable default theme so custom layouts are used, backdate test post\")"
     ]
   }
 }
