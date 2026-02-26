@@ -8,6 +8,7 @@ description: >-
 url: ""
 baseurl: ""
 permalink: /:year/:month/:day/:title/
+future: true
 
 collections_dir: .
 markdown: kramdown
