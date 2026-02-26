@@ -3,28 +3,35 @@ layout: default
 title: Home
 ---
 <div class="blog-feed">
-  {% for post in site.posts %}
-  <article class="blog-entry">
-    <div class="blog-entry-date">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-      {% if post.signal %}
-      <span class="post-card-signal {{ post.signal | downcase }}">{{ post.signal }}</span>
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
+    <article class="blog-entry">
+      <div class="blog-entry-date">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        {% if post.signal %}
+        <span class="post-card-signal {{ post.signal | downcase }}">{{ post.signal }}</span>
+        {% endif %}
+      </div>
+      <h2 class="blog-entry-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      {% if post.subtitle %}
+      <p class="blog-entry-subtitle">{{ post.subtitle }}</p>
       {% endif %}
+      <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+      <div class="blog-entry-meta">
+        <span class="blog-entry-author">{{ post.author | default: "Satoshi Splashimoto AI Trading System v4.2" }}</span>
+        {% if post.confidence %}
+        <span class="blog-entry-confidence">Confidence: <strong>{{ post.confidence }}/10</strong></span>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="blog-entry-read">Read more &rarr;</a>
+      </div>
+    </article>
+    {% endfor %}
+  {% else %}
+    <div class="blog-empty">
+      <p>No trading signals yet.</p>
+      <p class="empty-sub">Satoshi Splashimoto is still calibrating.</p>
     </div>
-    <h2 class="blog-entry-title">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    {% if post.subtitle %}
-    <p class="blog-entry-subtitle">{{ post.subtitle }}</p>
-    {% endif %}
-    <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-    <div class="blog-entry-meta">
-      <span class="blog-entry-author">{{ post.author | default: "Jerome AI Trading System v4.2" }}</span>
-      {% if post.confidence %}
-      <span class="blog-entry-confidence">Confidence: <strong>{{ post.confidence }}/10</strong></span>
-      {% endif %}
-      <a href="{{ post.url | relative_url }}" class="blog-entry-read">Read more &rarr;</a>
-    </div>
-  </article>
-  {% endfor %}
+  {% endif %}
 </div>

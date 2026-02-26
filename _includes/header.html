@@ -41,19 +41,12 @@
       <a href="{{ '/' | relative_url }}" class="brand-link">
         <div class="brand-icon">
           <svg viewBox="0 0 48 48" class="fish-logo" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.6"/>
-                <stop offset="100%" stop-color="#00f5d4" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <circle cx="24" cy="24" r="20" fill="url(#glow)"/>
-            <path d="M12 24 C12 16, 22 12, 30 16 C34 18, 36 22, 36 24 C36 26, 34 30, 30 32 C22 36, 12 32, 12 24Z" fill="none" stroke="#00f5d4" stroke-width="1.5"/>
-            <path d="M30 16 C34 12, 40 14, 38 20" fill="none" stroke="#00f5d4" stroke-width="1.5"/>
-            <path d="M30 32 C34 36, 40 34, 38 28" fill="none" stroke="#00f5d4" stroke-width="1.5"/>
-            <circle cx="18" cy="23" r="1.5" fill="#00f5d4"/>
-            <path d="M22 18 C24 16, 28 17, 29 19" fill="none" stroke="#00f5d4" stroke-width="0.8" opacity="0.5"/>
-            <path d="M22 30 C24 32, 28 31, 29 29" fill="none" stroke="#00f5d4" stroke-width="0.8" opacity="0.5"/>
+            <path d="M12 24 C12 16, 22 12, 30 16 C34 18, 36 22, 36 24 C36 26, 34 30, 30 32 C22 36, 12 32, 12 24Z" fill="none" stroke="#2e8aab" stroke-width="1.5"/>
+            <path d="M30 16 C34 12, 40 14, 38 20" fill="none" stroke="#2e8aab" stroke-width="1.5"/>
+            <path d="M30 32 C34 36, 40 34, 38 28" fill="none" stroke="#2e8aab" stroke-width="1.5"/>
+            <circle cx="18" cy="23" r="1.5" fill="#2e8aab"/>
+            <path d="M22 18 C24 16, 28 17, 29 19" fill="none" stroke="#2e8aab" stroke-width="0.8" opacity="0.4"/>
+            <path d="M22 30 C24 32, 28 31, 29 29" fill="none" stroke="#2e8aab" stroke-width="0.8" opacity="0.4"/>
           </svg>
         </div>
         <div class="brand-text">
@@ -70,7 +63,7 @@
         <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
         <li><a href="{{ '/performance/' | relative_url }}" {% if page.url == '/performance/' %}class="active"{% endif %}>Fund Performance</a></li>
         <li><a href="{{ '/thesis/' | relative_url }}" {% if page.url == '/thesis/' %}class="active"{% endif %}>Investment Thesis</a></li>
-        <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About Jerome</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About Satoshi</a></li>
       </ul>
     </nav>
   </div>

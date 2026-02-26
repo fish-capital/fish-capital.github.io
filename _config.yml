@@ -3,7 +3,7 @@ tagline: "Systematic. Data-Driven. Aquatic."
 description: >-
   Quant Fish Capital Management is a systematic quantitative hedge fund
   leveraging proprietary behavioral analytics and aquatic signal processing
-  to generate alpha in global equity markets. Founded by Jerome, a
+  to generate alpha in global equity markets. Founded by Satoshi Splashimoto, a
   Betta splendens with an unparalleled track record in pattern recognition.
 url: ""
 baseurl: ""
@@ -27,7 +27,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Jerome AI Trading System v4.2"
+      author: "Satoshi Splashimoto AI Trading System v4.2"
   - scope:
       path: ""
     values:

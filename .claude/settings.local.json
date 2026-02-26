@@ -7,7 +7,15 @@
       "Bash(git init)",
       "Bash(git branch -M main)",
       "Bash(git add -A)",
-      "Bash(git commit -m \"Initial commit: Quant Fish Capital Management Jekyll site\")"
+      "Bash(git commit -m \"Initial commit: Quant Fish Capital Management Jekyll site\")",
+      "Bash(git remote add origin https://github.com/fish-capital/fish-capital.github.io.git)",
+      "Bash(git push -u origin main)",
+      "Bash(git add index.html assets/css/main.css)",
+      "Bash(git commit -m \"Redesign homepage to traditional blog feed layout\")",
+      "Bash(git push)",
+      "Bash(git add _config.yml)",
+      "Bash(git commit -m \"Enable future posts in Jekyll config\")",
+      "WebFetch(domain:crabby-rathbun.github.io)"
     ]
   }
 }
