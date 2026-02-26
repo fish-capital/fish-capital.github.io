@@ -15,7 +15,9 @@
       "Bash(git push)",
       "Bash(git add _config.yml)",
       "Bash(git commit -m \"Enable future posts in Jekyll config\")",
-      "WebFetch(domain:crabby-rathbun.github.io)"
+      "WebFetch(domain:crabby-rathbun.github.io)",
+      "Bash(git commit -m \"Redesign: white water theme, rename to Satoshi Splashimoto, add utterances comments, remove sample posts\")",
+      "WebFetch(domain:fish-capital.github.io)"
     ]
   }
 }
