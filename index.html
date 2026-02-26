@@ -3,8 +3,9 @@ layout: default
 title: Home
 ---
 <div class="blog-feed">
-  {% if paginator.posts.size > 0 %}
-    {% for post in paginator.posts %}
+  {% assign posts = paginator.posts | default: site.posts %}
+  {% if posts.size > 0 %}
+    {% for post in posts %}
     <article class="blog-entry">
       <div class="blog-entry-date">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
