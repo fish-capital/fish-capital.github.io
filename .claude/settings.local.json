@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ruby --version)",
+      "Bash(gem --version)",
+      "Bash(bundler --version)",
+      "Bash(git init)",
+      "Bash(git branch -M main)",
+      "Bash(git add -A)",
+      "Bash(git commit -m \"Initial commit: Quant Fish Capital Management Jekyll site\")"
+    ]
+  }
+}

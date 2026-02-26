@@ -1,0 +1,64 @@
+---
+layout: default
+title: Home
+---
+<section class="home-hero">
+  <h2>Where <span class="hero-accent">Behavioral Alpha</span><br>Meets Marine Biology</h2>
+  <p>
+    Quant Fish Capital Management deploys proprietary aquatic signal processing
+    to identify asymmetric opportunities in global equity markets. Our edge is
+    a betta fish named Jerome.
+  </p>
+</section>
+
+<section class="home-stats">
+  <div class="stat-card">
+    <span class="stat-value">+847%</span>
+    <span class="stat-label">Annualized Return (Hypothetical)</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-value">0.03</span>
+    <span class="stat-label">Correlation to S&P 500</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-value">4.2</span>
+    <span class="stat-label">Sharpe Ratio (Self-Reported)</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-value">1</span>
+    <span class="stat-label">Fish on Staff</span>
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <h2>Latest Trading Signals</h2>
+    <p>Real-time behavioral analytics from the Jerome AI Trading System v4.2</p>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="post-grid">
+    {% for post in site.posts limit:6 %}
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        {% if post.signal %}
+        <span class="post-card-signal {{ post.signal | downcase }}">{{ post.signal }}</span>
+        {% endif %}
+      </div>
+      <div class="post-card-body">
+        <h3 class="post-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      </div>
+      <div class="post-card-footer">
+        {% if post.confidence %}
+        <span class="post-card-confidence">Confidence: <strong>{{ post.confidence }}/10</strong></span>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="post-card-signal neutral" style="font-size:0.65rem;">Read Analysis &rarr;</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,77 @@
+<div class="ticker-tape" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item positive">$GILL +2.47%</span>
+    <span class="ticker-item negative">$KRIL -0.83%</span>
+    <span class="ticker-item positive">$REEF +5.12%</span>
+    <span class="ticker-item negative">$PLNK -1.29%</span>
+    <span class="ticker-item positive">$TIDAL +0.67%</span>
+    <span class="ticker-item positive">$BETTA +3.84%</span>
+    <span class="ticker-item negative">$ANCH -2.11%</span>
+    <span class="ticker-item positive">$CRAL +1.55%</span>
+    <span class="ticker-item positive">$DPTH +4.20%</span>
+    <span class="ticker-item negative">$HOOK -0.44%</span>
+    <span class="ticker-item positive">$TUNA +2.89%</span>
+    <span class="ticker-item negative">$SHRK -3.17%</span>
+    <span class="ticker-item positive">$WAVE +1.03%</span>
+    <span class="ticker-item positive">$FLOT +6.21%</span>
+    <span class="ticker-item negative">$KELP -0.92%</span>
+    <span class="ticker-item positive">$ABYS +2.34%</span>
+    <span class="ticker-item positive">$GILL +2.47%</span>
+    <span class="ticker-item negative">$KRIL -0.83%</span>
+    <span class="ticker-item positive">$REEF +5.12%</span>
+    <span class="ticker-item negative">$PLNK -1.29%</span>
+    <span class="ticker-item positive">$TIDAL +0.67%</span>
+    <span class="ticker-item positive">$BETTA +3.84%</span>
+    <span class="ticker-item negative">$ANCH -2.11%</span>
+    <span class="ticker-item positive">$CRAL +1.55%</span>
+    <span class="ticker-item positive">$DPTH +4.20%</span>
+    <span class="ticker-item negative">$HOOK -0.44%</span>
+    <span class="ticker-item positive">$TUNA +2.89%</span>
+    <span class="ticker-item negative">$SHRK -3.17%</span>
+    <span class="ticker-item positive">$WAVE +1.03%</span>
+    <span class="ticker-item positive">$FLOT +6.21%</span>
+    <span class="ticker-item negative">$KELP -0.92%</span>
+    <span class="ticker-item positive">$ABYS +2.34%</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <a href="{{ '/' | relative_url }}" class="brand-link">
+        <div class="brand-icon">
+          <svg viewBox="0 0 48 48" class="fish-logo" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#00f5d4" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="24" cy="24" r="20" fill="url(#glow)"/>
+            <path d="M12 24 C12 16, 22 12, 30 16 C34 18, 36 22, 36 24 C36 26, 34 30, 30 32 C22 36, 12 32, 12 24Z" fill="none" stroke="#00f5d4" stroke-width="1.5"/>
+            <path d="M30 16 C34 12, 40 14, 38 20" fill="none" stroke="#00f5d4" stroke-width="1.5"/>
+            <path d="M30 32 C34 36, 40 34, 38 28" fill="none" stroke="#00f5d4" stroke-width="1.5"/>
+            <circle cx="18" cy="23" r="1.5" fill="#00f5d4"/>
+            <path d="M22 18 C24 16, 28 17, 29 19" fill="none" stroke="#00f5d4" stroke-width="0.8" opacity="0.5"/>
+            <path d="M22 30 C24 32, 28 31, 29 29" fill="none" stroke="#00f5d4" stroke-width="0.8" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-name">Quant Fish Capital Management</h1>
+          <p class="brand-tagline">{{ site.tagline }}</p>
+        </div>
+      </a>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-list">
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/performance/' | relative_url }}" {% if page.url == '/performance/' %}class="active"{% endif %}>Fund Performance</a></li>
+        <li><a href="{{ '/thesis/' | relative_url }}" {% if page.url == '/thesis/' %}class="active"{% endif %}>Investment Thesis</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About Jerome</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,40 @@
+title: Quant Fish Capital Management
+tagline: "Systematic. Data-Driven. Aquatic."
+description: >-
+  Quant Fish Capital Management is a systematic quantitative hedge fund
+  leveraging proprietary behavioral analytics and aquatic signal processing
+  to generate alpha in global equity markets. Founded by Jerome, a
+  Betta splendens with an unparalleled track record in pattern recognition.
+url: ""
+baseurl: ""
+permalink: /:year/:month/:day/:title/
+
+collections_dir: .
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Jerome AI Trading System v4.2"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
